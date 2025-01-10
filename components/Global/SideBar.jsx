@@ -47,7 +47,7 @@ const SideBar = ({ setActiveComponent }) => {
       icon: "img/lighticon/light-7.png",
     },
     {
-      menu: "Networks",
+      menu: "MindMap",
       icon: "img/lighticon/light-15.png",
     },
   ];
@@ -87,9 +87,9 @@ const SideBar = ({ setActiveComponent }) => {
       <div className="leftpanel_logo">
         <a className="fn_logo">
           <span className="full_logo">
-            <img src="img/light-logo.png" className="desktop_logo" alt="" />
+            <img src="img/Purple1.png" className="desktop_logo" alt="" />
             {/* above is the logo of cryptobot for big screen  */}
-            <img src="img/light-logo.png" className="retina_logo" alt="" />
+            <img src="img/Purple1.png" className="retina_logo" alt="" />
             {/* above is the logo of cryptobot for small screen */}
           </span>
           <span className="short_logo">

@@ -594,6 +594,11 @@ frenify_typing span {
     }
 }
 
+.desktop_logo2 {
+    width: 100px;
+    height: 100px;
+}
+
 .techwave_fn_header,
 .techwave_fn_leftpanel,
 .techwave_fn_leftpanel .group__list a,
@@ -871,8 +876,8 @@ frenify_typing span {
     right: 0;
     background-color: var(--techwave-header-bg-color);
     display: flex;
-    justify-content: space-between;
-    -ms-align-items: center;
+    /* justify-content: center; */
+    /* -ms-align-items: center; */
     align-items: center;
     padding: 0 40px;
     z-index: 100;

@@ -14,7 +14,7 @@ import {
   Home,
   TradeTokens,
   TopExchangeTokens,
-  Networks,
+  MindMap,
   AddNetwork,
   Price,
   Login,
@@ -141,13 +141,8 @@ const index = () => {
               <TradeTokens />
             ) : activeComponent == "Top Exchange Tokens" ? (
               <TopExchangeTokens />
-            ) : activeComponent == "Networks" ? (
-              <Networks
-                networkName={networkName}
-                setNetworkName={setNetworkName}
-                notifyError={notifyError}
-                notifySuccess={notifySuccess}
-              />
+            ) : activeComponent == "MindMap" ? (
+              <MindMap/>
             ) : activeComponent == "Add Network" ? (
               <AddNetwork axios={axios} />
             ) : activeComponent == "Trading" ? (
