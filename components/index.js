@@ -15,6 +15,7 @@ import Home from "./Body/Home";
 import TradeTokens from "./Body/TradeTokens";
 import TopExchangeTokens from "./Body/TopExchangeTokens";
 import Networks from "./Body/Networks";
+import MindMap from "./Body/MindMap";
 import AddNetwork from "./Body/AddNetwork";
 import Price from "./Body/Price";
 import Profile from "./Body/Profile";
@@ -33,6 +34,7 @@ export {
   TradeTokens,
   TopExchangeTokens,
   Networks,
+  MindMap,
   AddNetwork,
   Price,
   Login,

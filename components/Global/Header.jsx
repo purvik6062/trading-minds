@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+import { Search } from "lucide-react";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Header = ({ networkName, setActiveComponent }) => {
   const [userDetails, setUserDetails] = useState({});
   const [userMembership, setUserMembership] = useState();
+  const [view, setView] = useState("overview");
 
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userProfile"));
@@ -14,50 +17,49 @@ const Header = ({ networkName, setActiveComponent }) => {
 
   return (
     <div className="techwave_fn_header">
-      <div className="header__left">
-        <div className="fn__token_info">
-          <span className="token_summary">
-            <span className="count">AC</span>
-            <span className="text">{networkName}</span>
-          </span>
-
-          {userMembership !== "notMember" ? (
-            <a
-              onClick={() => setActiveComponent("Trading")}
-              className="token_upgrade techwave_fn_button"
-            >
-              <span>Start Trade</span>
-            </a>
-          ) : (
-            <a
-              onClick={() => setActiveComponent("Pricing")}
-              className="token_upgrade techwave_fn_button"
-            >
-              <span>Upgrade</span>
-            </a>
-          )}
-        </div>
-      </div>
-
-      <div className="header__right">
-        <div className="fn__nav_bar">
-          <div className="bar__item bar__item_search">
-            <div className="item_opener" title="Search">
-              <img src="img/lighticon/light-5.png" className="fn__svg" alt="" />
-            </div>
-            <div className="item_popup" data-position="right">
-              <input type="text" placeholder="search" />
+      <div className="flex w-full justify-between items-center border border-gray-700">
+        <nav>
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex justify-between h-16">
+              <div className="flex items-center">
+                <h1 className="text-xl font-bold">AI</h1>
+                <div className="ml-5 flex">
+                  {[
+                    "Predictions",
+                    "Leaderboard",
+                    "Analytics",
+                    "AI Insights",
+                  ].map((item) => (
+                    <button
+                      key={item}
+                      onClick={() => setView(item.toLowerCase())}
+                      className={`px-3 py-2 rounded-md text-sm font-medium ${
+                        view === item.toLowerCase()
+                          ? "bg-gray-700 text-white"
+                          : "text-gray-300 hover:bg-gray-600"
+                      }`}
+                    >
+                      {item}
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div className="flex items-center">
+                <div className="relative mx-4">
+                  <input
+                    type="text"
+                    placeholder="Search predictions..."
+                    className="w-12 px-4 py-2 rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:border-blue-500"
+                  />
+                  <Search className="absolute right-3 top-2.5 text-gray-400 w-5 h-5" />
+                </div>
+              </div>
             </div>
           </div>
+        </nav>
 
-          <div className="bar__item bar__item_user">
-            <a
-              onClick={() => setActiveComponent("Profile")}
-              className="user_opener fn__tooltip"
-            >
-              <img src={userDetails?.image || "img/crypto.png"} alt="" />
-            </a>
-          </div>
+        <div className="flex items-center">
+          <ConnectButton />
         </div>
       </div>
     </div>

@@ -15,6 +15,7 @@ import {
   TradeTokens,
   TopExchangeTokens,
   Networks,
+  MindMap,
   AddNetwork,
   Price,
   Login,
@@ -148,6 +149,8 @@ const index = () => {
                 notifyError={notifyError}
                 notifySuccess={notifySuccess}
               />
+            ) : activeComponent == "MindMap" ? (
+              <MindMap/>
             ) : activeComponent == "Add Network" ? (
               <AddNetwork axios={axios} />
             ) : activeComponent == "Trading" ? (

@@ -14,7 +14,7 @@ const Home = () => {
                 <h1 className="title">Automate Your Crypto Trading</h1>
 
                 <p className="desc">
-                  Crypto Trading Financial Bot For Buying and Sell Crypto
+                  Crypto Trading Financial AI Agent For Buying and Sell Crypto
                 </p>
               </div>
 
@@ -78,13 +78,10 @@ const Home = () => {
 
             <div className="section_right">
               <div className="company_info">
-                <img src="img/light-logo.png" alt="" />
+                {/* <img src="img/light-logo.png" alt="" /> */}
+                <h1 className="mt-1 mainHead">TradingMinds</h1>
                 <p className="fn__animated_text">
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Cumque provident accusantium ad ipsam facilis, officia a
-                  labore fugit, quibusdam doloremque qui odio veritatis
-                  perferendis veniam praesentium nisi. Neque, iste
-                  necessitatibus?
+                  Trading Minds is an AI-powered platform designed to evaluate the credibility and accuracy of trading-related Twitter accounts, helping enthusiasts make informed decisions. It dynamically ranks accounts on a leaderboard based on prediction accuracy, engagement, and activity. Users can subscribe to high-performing accounts and automate trading decisions through AI-driven execution.
                 </p>
                 <hr />
                 <div className="fn__members">

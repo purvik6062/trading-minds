@@ -34,8 +34,8 @@ const Login = ({ setActiveComponent, axios, notifyError, notifySuccess }) => {
 
     setIsLoading(true);
     notifySuccess("Logging in...");
-
     try {
+      //API CALL
       const response = await axios({
         method: "POST",
         url: `/api/v1/user/login`,
